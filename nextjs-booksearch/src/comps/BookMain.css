@@ -1,0 +1,152 @@
+.title_box{
+  height: 50px;
+  /* border: 1px solid #aaa; */
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-radius: 15px; */
+  background-color: rgb(255, 211, 122);
+  border-radius: 10px;
+}
+
+.project_title{
+  font-weight: 900;
+  text-align: center;
+  /* margin-top: 25px; */
+}
+
+.book.main {
+  display: flex;
+  gap: 3px;
+  width: 80%;
+  margin: 30px auto;
+  aside {
+    /* 전체화면에 50%만큼 픽셀로 고정
+    calc 는 전체의 퍼센트를 픽셀로 변환한다
+    */
+    /* 화면 폭의 50% 에 해당하는 px 값을 계싼하여 width 로 설정하기
+    overflow : hidden 이 설정에서 보여지는 content 를 제한하기 위한 설정 */
+    width: calc(50%);
+    padding: 1rem;
+    background-color: #fffaf4;
+    /* border-radius: 20px; */
+    box-shadow: 2px 2px 2px 2px  rgb(255, 227, 172);
+  }
+  aside.list {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      list-style-type: none;
+      li {
+        padding: 8px;
+        /* text(content) 에 보여지는 모양을 정리 */
+        white-space: nowrap;
+        overflow: hidden;
+        /* 화면에 글자 넘어가면 ... 으로 표시 ellipsis */
+        text-overflow: ellipsis;
+        &:nth-of-type(odd) {
+          background-color: rgb(255, 227, 172);
+        }
+        &:hover {
+          background-color: rgb(255, 211, 122);
+          cursor: pointer;
+        }
+      }
+    }
+    div {
+      flex: 1;
+      padding: 15px;
+    }
+  }
+  aside.detail {
+    flex: 3;
+  }
+}
+
+
+
+div.book.search {
+  padding: 10px;
+  text-align: center;
+  input {
+    padding: 8px;
+    border: 1px solid rgb(255, 211, 122);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    &:focus {
+      border: 1px solid green;
+    }
+    &:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  }
+}
+
+.list_block {
+  border: 1px solid rgb(255, 211, 122);
+}
+
+/* 800px 보다 작아지면 */
+/* @media (max-width: 800px) {
+  .book.main {
+    flex-direction: column;
+
+    align-items: center;
+    aside {
+      width: calc(90%);
+    }
+  }
+} */
+.des_block {
+  height: 200px;
+  border: 1px solid rgb(255, 211, 122);
+  padding: 10px;
+  overflow-y: scroll;
+}
+/* 스크롤 */
+.des_block::-webkit-scrollbar {
+  background-color: rgb(255, 243, 219);
+  width: 10px;
+}
+/* 스크롤바 */
+.des_block::-webkit-scrollbar-thumb {
+  background-color:  rgb(255, 211, 122);
+  border-radius: 12px 12px 12px 12px;
+  width: 10px;
+}
+
+
+.book_title {
+  text-align: center;
+  font-size: larger;
+  h1{
+    margin-bottom: 15px;
+  }
+}
+
+.book_img {
+  border: 3px solid black;
+}
+.expla {
+  width: 95%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid rgb(255, 211, 122);
+  /* border-radius: 15px; */
+  background-color: #fff;
+}
+
+.footer {
+  border: 1px solid rgb(255, 211, 122);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
